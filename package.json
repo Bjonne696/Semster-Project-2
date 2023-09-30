@@ -1,0 +1,25 @@
+{
+  "name": "semster-project-2",
+  "version": "1.0.0",
+  "description": "This is my semester project at Noroff Academy",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:dist/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bjonne696/Semster-Project-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bjonne696/Semster-Project-2/issues"
+  },
+  "homepage": "https://github.com/Bjonne696/Semster-Project-2#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "sass": "^1.68.0"
+  }
+}

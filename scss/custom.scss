@@ -1,0 +1,27 @@
+// Import the main Bootstrap files
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+
+// Define color variables
+$primary-gray: #5D5D5D;
+$secondary-blue: #7FBDC7;
+$background-light: #F8F4D7;
+$success-green: #B2F37A;
+$danger-red: #C55038;
+$warning-yellow: #F9F46A;
+
+// Basic stylings
+body {
+    background-color: $background-light;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: $primary-gray;
+}
+
+.btn-primary {
+    background-color: $secondary-blue;
+}
+
+// Add more styles and responsive breakpoints using Bootstrap's mixins or your own
