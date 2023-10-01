@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const userToken = localStorage.getItem('accessToken');
+    const userToken = localStorage.getItem('userToken');
     const userCredits = localStorage.getItem('credits');
     let userLoggedIn = userToken !== null;
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('logoutButton').addEventListener('click', function() {
 
-        localStorage.removeItem('accessToken');
+        localStorage.removeItem('userToken');
         localStorage.removeItem('credits');
         userLoggedIn = false;
         document.getElementById('userBanner').classList.add('d-none');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function updateCredits() {
-    const userToken = localStorage.getItem('accessToken');
+    const userToken = localStorage.getItem('userToken');
     if (!userToken) {
         return;
     }
