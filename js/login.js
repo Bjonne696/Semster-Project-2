@@ -1,7 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    const API_URL = 'https://api.noroff.dev/api/v1'; // replace with your actual endpoint base URL, like "http://example.com/api/v1"
+    const API_URL = 'https://api.noroff.dev/api/v1';
 
+    function displaySuccessMessage(message) {
+        const successDiv = document.getElementById('successMessage');
+        successDiv.textContent = message;
+        successDiv.classList.remove('d-none');
+    }
+
+    function displayErrorMessage(message) {
+        const errorDiv = document.getElementById('errorMessage');
+        errorDiv.textContent = message;
+        errorDiv.classList.remove('d-none');
+    }
+
+    // LOGIN
     document.getElementById('loginForm').addEventListener('submit', async function(event) {
         event.preventDefault();
 
@@ -22,26 +35,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (response.ok) {
                 let data = await response.json();
-                // Assuming your API returns a token in the format { token: 'YOUR_USER_TOKEN' }
                 localStorage.setItem('userToken', data.token);
-                window.location.href = 'dashboard.html'; // Redirecting to dashboard
+                localStorage.setItem('credits', data.credits); // Store credits in localStorage
+                displaySuccessMessage("Logged in successfully!"); // display success
+                setTimeout(() => { 
+                    window.location.href = 'dashboard.html'; 
+                }, 2000); // redirect after 2 seconds
             } else {
-                alert('Error logging in. Please try again.');
+                displayErrorMessage('Error logging in. Please try again.');
             }
         } catch (error) {
             console.error('There was an error logging in', error);
+            displayErrorMessage('Error logging in. Please try again.');
         }
     });
 
+    // REGISTER
     document.getElementById('registerForm').addEventListener('submit', async function(event) {
         event.preventDefault();
 
+        const email = document.getElementById('registerEmail').value;
         const username = document.getElementById('registerUsername').value;
         const password = document.getElementById('registerPassword').value;
         const confirmPassword = document.getElementById('registerConfirmPassword').value;
 
         if (password !== confirmPassword) {
-            alert('Passwords do not match!');
+            displayErrorMessage('Passwords do not match!');
             return;
         }
 
@@ -52,18 +71,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    username: username,
+                    name: username,
+                    email: email,
                     password: password
                 })
             });
 
             if (response.ok) {
-                alert('Successfully registered. You can now log in.');
+                displaySuccessMessage('Successfully registered. You can now log in.');
             } else {
-                alert('Error during registration. Please try again.');
+                displayErrorMessage('Error during registration. Please try again.');
             }
         } catch (error) {
             console.error('There was an error during registration', error);
+            displayErrorMessage('Error during registration. Please try again.');
         }
     });
 });

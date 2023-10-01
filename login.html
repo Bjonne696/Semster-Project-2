@@ -42,6 +42,8 @@
     </div>
 
     <div class="container mt-4">
+        <div class="alert alert-success d-none" id="successMessage"></div>
+<div class="alert alert-danger d-none" id="errorMessage"></div>
         <div class="row">
             <div class="col-md-6">
                 <!-- Login Form -->
@@ -64,8 +66,8 @@
                 <h2>Register</h2>
                 <form id="registerForm">
                     <div class="mb-3">
-                        <label for="registerUsername" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="registerUsername" required>
+                        <label for="registerEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="registerEmail" required>
                     </div>
                     <div class="mb-3">
                         <label for="registerPassword" class="form-label">Password</label>
