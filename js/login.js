@@ -14,17 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
         errorDiv.classList.remove('d-none');
     }
 
-    // Transform the email into a valid name format
-    const transformEmailToName = (email) => {
-        return email.replace(/[@.]/g, '');
-    };
-
     // LOGIN
     document.getElementById('loginForm').addEventListener('submit', async function(event) {
         event.preventDefault();
-    
-        const email = document.getElementById('loginEmail').value; // Ensure this ID matches the login form's email input ID
-        const username = transformEmailToName(email); // If the API expects a username, transform the email to a username format
+
+        const name = document.getElementById('loginNameInput').value;
+        const email = document.getElementById('loginEmailInput').value;
         const password = document.getElementById('loginPassword').value;
 
         try {
@@ -34,22 +29,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    username: username,
+                    name: name,
+                    email: email,
                     password: password
                 })
             });
 
             if (response.ok) {
                 let data = await response.json();
-                localStorage.setItem('userToken', data.token);
+                localStorage.setItem('userToken', data.accessToken);
                 localStorage.setItem('credits', data.credits);
                 displaySuccessMessage("Logged in successfully!");
                 setTimeout(() => {
                     window.location.href = 'dashboard.html';
                 }, 2000);
             } else {
-                const errorText = await response.text();
-                console.error(errorText);
+                const errorData = await response.json();
+                console.error(errorData);
                 displayErrorMessage('Error logging in. Please try again.');
             }
         } catch (error) {
@@ -59,23 +55,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // REGISTER
-    document.getElementById('registerForm').addEventListener('submit', async function(event) {
+     document.getElementById('registerForm').addEventListener('submit', async function(event) {
         event.preventDefault();
 
+        const name = document.getElementById('registerName').value;
         const email = document.getElementById('registerEmail').value;
-        const username = transformEmailToName(email);  // Use the transform function
         const password = document.getElementById('registerPassword').value;
         const confirmPassword = document.getElementById('registerConfirmPassword').value;
+
+        if (!/^[\w]{1,20}$/.test(name)) {
+            displayErrorMessage('Invalid name. Name can only contain alphanumeric characters and underscores, and it must be less than 21 characters.');
+            return;
+        }
 
         if (!/^[a-zA-Z0-9_.]+@stud.noroff.no$/.test(email)) {
             displayErrorMessage('Please use your stud.noroff.no email address for registration.');
             return;
         }
 
-        if (!/^[a-zA-Z0-9_]{1,20}$/.test(username)) {
-            displayErrorMessage('Username can only use a-Z, 0-9, and _. Max 20 characters.');
-            return;
-        }
 
         if (password !== confirmPassword) {
             displayErrorMessage('Passwords do not match!');
@@ -89,8 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    name: username,
+                    name: name,
                     email: email,
+                    // avatar: "URL_TO_AVATAR",  // If required, uncomment this and provide a proper URL.
                     password: password
                 })
             });
@@ -99,8 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 displaySuccessMessage('Successfully registered. You can now log in.');
             } else {
                 const errorData = await response.json();
-                console.error(errorData);
-                displayErrorMessage('Error during registration. Please check your input.');
+                console.error(errorData.errors[0].path);
+                displayErrorMessage(errorData.errors[0].message);
             }
         } catch (error) {
             console.error('There was an error during registration', error);
