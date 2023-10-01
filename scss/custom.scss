@@ -72,6 +72,14 @@ h2 {
     }
 }
 
+.yellow-text {
+    color: $warning-yellow;
+    
+    &:hover, &:focus {
+        color: darken($warning-yellow, 10%);
+    }
+}
+
 .hero-banner {
     background-color: $secondary-blue;
     padding: 50px 0;
