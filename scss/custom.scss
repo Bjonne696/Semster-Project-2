@@ -1,6 +1,4 @@
-// Import the main Bootstrap files
-@import '../node_modules/bootstrap/scss/bootstrap';
-
+// custom.scss
 
 // Define color variables
 $primary-gray: #5D5D5D;
@@ -10,18 +8,114 @@ $success-green: #B2F37A;
 $danger-red: #C55038;
 $warning-yellow: #F9F46A;
 
-// Basic stylings
 body {
     background-color: $background-light;
     font-family: Arial, sans-serif;
 }
 
+
 h2 {
     color: $primary-gray;
 }
 
-.btn-primary {
-    background-color: $secondary-blue;
+.navbar-primary-gray {
+    background-color: $primary-gray;
+    padding: 10px 20px;
+
+    .navbar-brand {
+        color: $background-light;
+        margin-right: 20px;
+    }
+
+    .searchbar {
+        input.form-control {
+            background-color: $background-light;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+
+
+    .btn-custom {
+        background-color: $primary-gray;
+        color: $background-light;
+        border: 1px solid $secondary-blue;
+        border-radius: 25px; // Round corners
+        transition: all 0.3s;
+    
+        &:hover, 
+        &:focus {
+            background-color: darken($primary-gray, 10%);
+            border-color: darken($secondary-blue, 10%);
+            color: darken($background-light, 10%);
+        }
+    }
 }
 
-// Add more styles and responsive breakpoints using Bootstrap's mixins or your own
+.user-banner {
+    background-color: $background-light;
+    display: flex;
+    align-items: center;
+
+    img {
+        border: 2px solid $secondary-blue;
+        border-radius: 50%;
+    }
+
+    .credit-balance {
+        font-weight: bold;
+        color: $primary-gray;
+    }
+}
+
+.hero-banner {
+    background-color: $secondary-blue;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    .hero-logo {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100px;
+        height: auto;
+    }
+
+    .hero-text {
+        color: $danger-red;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}
+
+
+input[type="text"], input[type="password"] {
+    background-color: $primary-gray;
+    color: $background-light;
+    border: 1px solid $secondary-blue;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    &::-webkit-text-security-disc {
+        color: $background-light;
+    }
+    &:focus {
+        outline: none;
+        border-color: $secondary-blue;
+        box-shadow: 0 0 10px rgba($secondary-blue, 0.5);
+    }
+}
+
+
+button {
+    background-color: $success-green;
+    color: $background-light;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    &:hover {
+        background-color: darken($success-green, 10%);
+    }
+}
