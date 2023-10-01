@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('loginForm').addEventListener('submit', async function(event) {
         event.preventDefault();
 
-        const username = document.getElementById('loginUsername').value;
+        const username = document.getElementById('registerUsername').value; // Adjusted this from loginUsername to registerUsername
         const password = document.getElementById('loginPassword').value;
 
         try {
@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     window.location.href = 'dashboard.html'; 
                 }, 2000); // redirect after 2 seconds
             } else {
+                const errorText = await response.text();
+                console.error(errorText);
                 displayErrorMessage('Error logging in. Please try again.');
             }
         } catch (error) {
@@ -80,6 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response.ok) {
                 displaySuccessMessage('Successfully registered. You can now log in.');
             } else {
+                const errorText = await response.text();
+                console.error(errorText);
                 displayErrorMessage('Error during registration. Please try again.');
             }
         } catch (error) {
