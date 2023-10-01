@@ -65,15 +65,55 @@
 
             <!-- Main content -->
             <div class="col-md-9">
-                <div class="tab-content">
-                    <div class="tab-pane active" id="listings">
-                        <!-- Display user's listings here -->
+    
+                <!-- Profile Header -->
+                <h2 class="profile-header">Welcome to your profile</h2>
+                
+                <!-- Cards -->
+                <div class="row mb-4">
+                    <!-- First Card -->
+                    <div class="col-md-6">
+                        <div class="card custom-card secondary-blue-bg">
+                            <div class="card-body">
+                                <p>Here you can view your current bids and listings! You can create your own listings here as well.</p>
+                                <button class="btn btn-success-green rounded-btn">New Listing</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tab-pane" id="bids">
-                        <!-- Display user's bids here -->
+            
+                    <!-- Second Card -->
+                    <div class="col-md-6">
+                        <div class="card custom-card success-green-bg">
+                            <div class="card-body">
+                                <p>Here you can change your avatar</p>
+                                <div class="drag-drop-avatar mb-3">
+                                    <!-- Drag & Drop Placeholder -->
+                                    <div class="avatar-placeholder"></div>
+                                </div>
+                                <button class="btn btn-secondary-blue rounded-btn">Change Avatar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            
+                <!-- Grey Section -->
+                <div class="section-header primary-gray-bg d-flex justify-content-between">
+                    <span class="section-title">My Listings</span>
+                    <span class="section-title">My Bids</span>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-md-6 listing-card-section">
+                        <!-- Placeholder for listing cards -->
+                        <div class="listing-card-placeholder"></div>
+                    </div>
+                    <div class="col-md-6 bids-card-section">
+                        <!-- Placeholder for bids cards -->
+                        <div class="bids-card-placeholder"></div>
+                    </div>
+                </div>
+                
             </div>
+            
         </div>
     </div>
 
