@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const userToken = localStorage.getItem('userToken');
+    const userToken = localStorage.getItem('accessToken');
     const userCredits = localStorage.getItem('credits');
     let userLoggedIn = userToken !== null;
 
-    // Function to display user data in userBanner
+
     function displayUserData(credits) {
         const creditsElement = document.getElementById('credits');
 
@@ -11,12 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('userBanner').classList.remove('d-none');
     }
 
-    // If user data exists, display the data in the userBanner
     if (userLoggedIn && userCredits) {
         displayUserData(userCredits);
     }
 
-    // Preventing access to the account if not logged in
     document.getElementById('accountLink').addEventListener('click', function(e) {
         if (!userLoggedIn) {
             alert('Please login first.');
@@ -24,10 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Logout functionality
     document.getElementById('logoutButton').addEventListener('click', function() {
-        // Clearing user token and credits from localStorage
-        localStorage.removeItem('userToken');
+
+        localStorage.removeItem('accessToken');
         localStorage.removeItem('credits');
         userLoggedIn = false;
         document.getElementById('userBanner').classList.add('d-none');
@@ -36,13 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function updateCredits() {
-    const userToken = localStorage.getItem('userToken');
+    const userToken = localStorage.getItem('accessToken');
     if (!userToken) {
         return;
     }
 
-    // Adjust the URL if necessary
-    const response = await fetch('https://api.noroff.dev/api/v1/auction/profiles/my_username', {
+
+    const response = await fetch('https://api.noroff.dev/api/v1/auction/profiles/name', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + userToken
@@ -57,5 +54,5 @@ async function updateCredits() {
     }
 }
 
-// Call the function to populate credits on DOM load
+
 updateCredits();

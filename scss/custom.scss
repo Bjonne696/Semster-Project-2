@@ -1,6 +1,4 @@
-// custom.scss
 
-// Define color variables
 $primary-gray: #5D5D5D;
 $secondary-blue: #7FBDC7;
 $background-light: #F8F4D7;
@@ -173,27 +171,25 @@ button {
     }
 }
 
-// Define styling for My Listings and My Bids cards
+
 .dashboard-cards-container {
     display: flex;
     justify-content: space-between;
 
     .card {
         flex: 1;
-        margin: 0 10px; // Adding some space between the cards
-
+        margin: 0 10px; 
         &.border {
-            border: 1px solid $primary-gray; // Set border around the whole card
+            border: 1px solid $primary-gray; 
         }
         
         .card-header {
-            background-color: $primary-gray; // Set background color to primary-gray
-            color: $background-light; // Set text color to background-light
-        }
+            background-color: $primary-gray; 
+            color: $background-light; 
     }
 }
 .section-header {
-    background-color: $primary-gray; // Updated background color
+    background-color: $primary-gray; 
     padding: 10px 0;
     .section-title {
         color: $background-light;
@@ -204,16 +200,16 @@ button {
 .listing-card-section,
 .bids-card-section {
     border: 1px solid $primary-gray;
-    height: 200px; // Adjust as needed
+    height: 200px; 
 
-    // Placeholder styles for listings and bids
+    
     .listing-card-placeholder,
     .bids-card-placeholder {
         background-color: black;
-        width: 25%; // Adjusted so that 4 images can fit side-by-side
+        width: 25%; 
         height: 100%;
         float: left;
-        margin: 0 1%; // Minimal spacing
+        margin: 0 1%; 
     }
 }
 

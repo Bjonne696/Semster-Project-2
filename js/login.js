@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         errorDiv.classList.remove('d-none');
     }
 
-    // LOGIN
+
     document.getElementById('loginForm').addEventListener('submit', async function(event) {
         event.preventDefault();
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // REGISTER
+
      document.getElementById('registerForm').addEventListener('submit', async function(event) {
         event.preventDefault();
 
@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 body: JSON.stringify({
                     name: name,
                     email: email,
-                    // avatar: "URL_TO_AVATAR",  // If required, uncomment this and provide a proper URL.
                     password: password
                 })
             });

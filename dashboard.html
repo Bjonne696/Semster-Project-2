@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap 5.0.1 CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/custom.css" rel="stylesheet">
     <title>Dashboard</title>
 </head>
 
 <body>
-    <!-- Navbar -->
+
     <nav class="navbar navbar-expand-lg navbar-primary-gray">
         <a class="navbar-brand" href="#">
             <img src="path_to_logo.png" alt="Logo" width="30" height="30">
@@ -36,7 +36,7 @@
         </div>
     </nav>
 
-    <!-- User Banner -->
+
     <div id="userBanner" class="d-none p-3 d-flex align-items-center justify-content-between user-banner sticky-top">
         <img src="path_to_avatar_placeholder.png" alt="Avatar" width="50" height="50">
         <div>
@@ -46,18 +46,18 @@
     </div>
 
     <div class="container mt-4">
-        <!-- Dashboard layout -->
+
         <div class="row">
             
-            <!-- Main content -->
+
             <div class="col-md-9">
 
-                <!-- Profile Header -->
+
                 <h2 class="profile-header">Welcome to your profile</h2>
                 
-                <!-- Cards -->
+
                 <div class="row mb-4">
-                    <!-- First Card -->
+
                     <div class="col-md-6">
                         <div class="card custom-card secondary-blue-bg">
                             <div class="card-body">
@@ -66,33 +66,25 @@
                             </div>
                         </div>
                     </div>
-            
-                                <!-- Second Card -->
                                 <div class="col-md-6">
                                     <div class="card custom-card success-green-bg">
                                         <div class="card-body">
                                             <p>Here you can change your avatar</p>
                                             <div class="drag-drop-avatar mb-3">
-                                                <!-- Drag & Drop Placeholder -->
                                                 <div class="avatar-placeholder"></div>
-                                                <!-- Hidden Input for File Selection -->
                                                 <input type="file" id="avatarInput" style="display: none;" accept="image/*">
                                             </div>
                                             <button class="btn btn-secondary-blue rounded-btn" id="changeAvatarBtn">Change Avatar</button>
                                         </div>
                                     </div>
                                 </div>
-                <!-- My Listings and My Bids Cards -->
                 <div class="row mt-4">
-
-                    <!-- My Listings Card -->
                     <div class="col-md-6">
                         <div class="card border">
                             <div class="card-header2">
                                 My Listings
                             </div>
                             <div class="card-body2">
-                                <!-- Placeholder for listing smaller cards -->
                                 <div class="row row2">
                                     <div class="col-md-4 mb-2">
                                         <div class="card">
@@ -103,20 +95,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Add more cards as needed -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- My Bids Card -->
                     <div class="col-md-6">
                         <div class="card border">
                             <div class="card-header2">
                                 My Bids
                             </div>
                             <div class="card-body card-body2">
-                                <!-- Placeholder for bids smaller cards -->
                                 <div class="row row2">
                                     <div class="col-md-4 mb-2">
                                         <div class="card">
@@ -127,7 +116,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Add more cards as needed -->
                                 </div>
                             </div>
                         </div>
@@ -138,8 +126,8 @@
         </div>
     </div>
 
-    <!-- Bootstrap 5.0.1 JS, Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
     <script src="js/login.js"></script>
     <script src="js/main.js"></script>

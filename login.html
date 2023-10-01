@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auction Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/custom.css"> <!-- Compiled CSS from SCSS -->
+    <link rel="stylesheet" href="dist/css/custom.css">
 </head>
 
 <body>
     <div class="main-container">
-        <!-- Start of Navbar -->
         <nav class="navbar navbar-expand-lg navbar-primary-gray sticky-top">
             <a class="navbar-brand" href="#">
                 <img src="path_to_logo.png" alt="Logo" width="30" height="30">
@@ -35,9 +34,7 @@
                 </ul>
             </div>
         </nav>
-        <!-- End of Navbar -->
 
-        <!-- Start of User Banner -->
         <div id="userBanner" class="d-none p-3 d-flex align-items-center justify-content-between user-banner sticky-top">
             <img src="path_to_avatar_placeholder.png" alt="Avatar" width="50" height="50">
             <div>
@@ -46,15 +43,13 @@
 
             </div>
         </div>
-        <!-- End of User Banner -->
 
-        <!-- Start of Main Content -->
         <div class="container mt-4">
             <div class="alert alert-success d-none" id="successMessage"></div>
             <div class="alert alert-danger d-none" id="errorMessage"></div>
             <div class="row">
                 <div class="col-md-6">
-                    <!-- Login Form -->
+
                     <h2>Login</h2>
                     <form id="loginForm" class="auth-form">
                     <div class="mb-3">
@@ -74,7 +69,7 @@
             </div>
 
             <div class="col-md-6">
-                <!-- Registration Form -->
+
                 <h2>Register</h2>
                 <form id="registerForm" class="auth-form">
                     <div class="mb-3">
@@ -99,7 +94,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
     <script src="js/login.js"></script>
     <script src="js/main.js"></script>
