@@ -13,7 +13,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 h2 {
     color: $primary-gray;
 }
@@ -26,15 +25,6 @@ h2 {
         color: $background-light;
         margin-right: 20px;
     }
-
-    .searchbar {
-        input.form-control {
-            background-color: $background-light;
-            border: none;
-            border-radius: 10px;
-        }
-    }
-
 
     .btn-custom {
         background-color: $primary-gray;
@@ -103,16 +93,12 @@ h2 {
     }
 }
 
-
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="search"] {
     background-color: $primary-gray;
     color: $background-light;
     border: 1px solid $secondary-blue;
     border-radius: 5px;
     padding: 0.5rem 1rem;
-    &::-webkit-text-security-disc {
-        color: $background-light;
-    }
     &:focus {
         outline: none;
         border-color: $secondary-blue;
@@ -120,13 +106,11 @@ input[type="text"], input[type="password"] {
     }
 }
 
-
 button {
     background-color: $success-green;
     color: $background-light;
     border: none;
     border-radius: 15px;
-    padding: 0.5rem 1rem;
     &:hover {
         background-color: darken($success-green, 10%);
     }
@@ -177,18 +161,39 @@ button {
     border: 2px dashed $primary-gray;
     position: relative;
     margin-bottom: 15px;
+
     .avatar-placeholder {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: black;
-        width: 70%;
-        height: 70%;
+        width: 50px;
+        height: 50px;
     }
 }
 
+// Define styling for My Listings and My Bids cards
+.dashboard-cards-container {
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+        flex: 1;
+        margin: 0 10px; // Adding some space between the cards
+
+        &.border {
+            border: 1px solid $primary-gray; // Set border around the whole card
+        }
+        
+        .card-header {
+            background-color: $primary-gray; // Set background color to primary-gray
+            color: $background-light; // Set text color to background-light
+        }
+    }
+}
 .section-header {
+    background-color: $primary-gray; // Updated background color
     padding: 10px 0;
     .section-title {
         color: $background-light;
@@ -200,11 +205,24 @@ button {
 .bids-card-section {
     border: 1px solid $primary-gray;
     height: 200px; // Adjust as needed
+
+    // Placeholder styles for listings and bids
+    .listing-card-placeholder,
+    .bids-card-placeholder {
+        background-color: black;
+        width: 25%; // Adjusted so that 4 images can fit side-by-side
+        height: 100%;
+        float: left;
+        margin: 0 1%; // Minimal spacing
+    }
 }
 
-.listing-card-placeholder,
-.bids-card-placeholder {
-    background-color: black;
-    width: 100%;
-    height: 100%;
+.card-body2, .row2 {
+    background-color: $background-light;
+    color: $primary-gray;
+}
+
+.card-header2{
+    background-color: $primary-gray;
+    color: $background-light;
 }

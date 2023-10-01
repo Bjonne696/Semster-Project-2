@@ -25,7 +25,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link btn-custom" href="login.html">Login/Register</a>
                 </li>
@@ -36,36 +36,22 @@
         </div>
     </nav>
 
-
     <!-- User Banner -->
-
     <div id="userBanner" class="d-none p-3 d-flex align-items-center justify-content-between user-banner sticky-top">
         <img src="path_to_avatar_placeholder.png" alt="Avatar" width="50" height="50">
         <div>
             <span id="credits" class="mr-3 credit-balance">1000 Credits</span>
             <button class="btn btn-custom yellow-text" id="logoutButton">Logout</button>
-
         </div>
     </div>
 
     <div class="container mt-4">
         <!-- Dashboard layout -->
         <div class="row">
-            <!-- Side navigation -->
-            <div class="col-md-3">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#listings" data-toggle="tab">My Listings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#bids" data-toggle="tab">My Bids</a>
-                    </li>
-                </ul>
-            </div>
-
+            
             <!-- Main content -->
             <div class="col-md-9">
-    
+
                 <!-- Profile Header -->
                 <h2 class="profile-header">Welcome to your profile</h2>
                 
@@ -76,44 +62,79 @@
                         <div class="card custom-card secondary-blue-bg">
                             <div class="card-body">
                                 <p>Here you can view your current bids and listings! You can create your own listings here as well.</p>
-                                <button class="btn btn-success-green rounded-btn">New Listing</button>
+                                <button id="newListingButton" class="btn btn-success-green rounded-btn">New Listing</button>
                             </div>
                         </div>
                     </div>
             
-                    <!-- Second Card -->
-                    <div class="col-md-6">
-                        <div class="card custom-card success-green-bg">
-                            <div class="card-body">
-                                <p>Here you can change your avatar</p>
-                                <div class="drag-drop-avatar mb-3">
-                                    <!-- Drag & Drop Placeholder -->
-                                    <div class="avatar-placeholder"></div>
+                                <!-- Second Card -->
+                                <div class="col-md-6">
+                                    <div class="card custom-card success-green-bg">
+                                        <div class="card-body">
+                                            <p>Here you can change your avatar</p>
+                                            <div class="drag-drop-avatar mb-3">
+                                                <!-- Drag & Drop Placeholder -->
+                                                <div class="avatar-placeholder"></div>
+                                                <!-- Hidden Input for File Selection -->
+                                                <input type="file" id="avatarInput" style="display: none;" accept="image/*">
+                                            </div>
+                                            <button class="btn btn-secondary-blue rounded-btn" id="changeAvatarBtn">Change Avatar</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <button class="btn btn-secondary-blue rounded-btn">Change Avatar</button>
+                <!-- My Listings and My Bids Cards -->
+                <div class="row mt-4">
+
+                    <!-- My Listings Card -->
+                    <div class="col-md-6">
+                        <div class="card border">
+                            <div class="card-header2">
+                                My Listings
+                            </div>
+                            <div class="card-body2">
+                                <!-- Placeholder for listing smaller cards -->
+                                <div class="row row2">
+                                    <div class="col-md-4 mb-2">
+                                        <div class="card">
+                                            <img src="path_to_placeholder_image.jpg" class="card-img-top" alt="Listing Image">
+                                            <div class="card-body2">
+                                                <h5 class="card-title">Listing Title</h5>
+                                                <p class="card-text">Listing description or details here.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Add more cards as needed -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            
-                <!-- Grey Section -->
-                <div class="section-header primary-gray-bg d-flex justify-content-between">
-                    <span class="section-title">My Listings</span>
-                    <span class="section-title">My Bids</span>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col-md-6 listing-card-section">
-                        <!-- Placeholder for listing cards -->
-                        <div class="listing-card-placeholder"></div>
+
+                    <!-- My Bids Card -->
+                    <div class="col-md-6">
+                        <div class="card border">
+                            <div class="card-header2">
+                                My Bids
+                            </div>
+                            <div class="card-body card-body2">
+                                <!-- Placeholder for bids smaller cards -->
+                                <div class="row row2">
+                                    <div class="col-md-4 mb-2">
+                                        <div class="card">
+                                            <img src="path_to_placeholder_image.jpg" class="card-img-top" alt="Bid Image">
+                                            <div class="card-body2">
+                                                <h5 class="card-title">Bid Title</h5>
+                                                <p class="card-text">Details of the bid or the associated listing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Add more cards as needed -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 bids-card-section">
-                        <!-- Placeholder for bids cards -->
-                        <div class="bids-card-placeholder"></div>
-                    </div>
+                    
                 </div>
-                
             </div>
-            
         </div>
     </div>
 
