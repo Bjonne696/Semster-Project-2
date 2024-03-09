@@ -1,8 +1,7 @@
 # Semster-Project-2
 This is my semester project at Noroff Academy.
 
-Overview
-The project appears to be an Auction Website. Users can navigate through different pages, search for items, log in/register, and presumably bid on items.
+This is an Auction Website. Users can navigate through different pages, search for items, log in/register, and presumably bid on items.
 
 Technologies Used
 HTML5: Used for structuring the website.
@@ -15,7 +14,7 @@ User Banner: Displays user-related information, including an avatar and credit b
 Login and Registration Forms: Users can log in or register a new account.
 New Listing Form: Presumably for users to add new items for auction.
 Dynamic Alerts: Alert messages for success or error feedback, probably related to user actions.
-Responsive Design: Given the use of Bootstrap and certain CSS stylings, the website is likely responsive and mobile-friendly.
+Responsive Design: Use of Bootstrap and certain CSS stylings, the website is likely responsive and mobile-friendly.
 Setup and Installation
 To get the project running locally:
 
