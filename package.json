@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Bjonne696/Semster-Project-2#readme",
   "dependencies": {
-    "bootstrap": "^5.0.1",
-    "sass": "^1.68.0"
+    "bootstrap": "^5.3.3",
+    "sass": "^1.71.1"
   }
 }
