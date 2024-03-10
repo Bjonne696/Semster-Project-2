@@ -68,9 +68,9 @@ npm run start
 Your contributions to improve Auction Zone, especially in implementing missing features, are highly appreciated:
 
 1. Fork the project.
-2. Create your feature branch (git checkout -b feature/YourFeature).
-3. Commit your changes (git commit -am 'Add some YourFeature').
-4. Push to the branch (git push origin feature/YourFeature).
+2. Create your Feature Branch (**`git checkout -b feature/AmazingFeature`**)
+3. Commit your Changes (**`git commit -m 'Add some AmazingFeature'`**)
+4. Push to the Branch (**`git push origin feature/AmazingFeature`**)
 5. Create a new Pull Request.
 
 ## Contact
