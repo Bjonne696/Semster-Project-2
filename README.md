@@ -28,6 +28,7 @@ The project leverages the following technologies:
 
 - [Bootstrap](https://getbootstrap.com/)
 - [SASS](https://sass-lang.com/)
+- Hosted on [Netlify](https://www.netlify.com/), ensuring optimal performance and security
 
 ## Getting Started
 
