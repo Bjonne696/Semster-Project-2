@@ -61,6 +61,8 @@ npm run sass
 npm run start
 ```
 
+3. To create a user, register with a @stud.noroff.no account.
+
 ## Contributing
 
 Your contributions to improve Auction Zone, especially in implementing missing features, are highly appreciated:
