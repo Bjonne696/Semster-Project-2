@@ -2,35 +2,43 @@
 
 ![image](https://github.com/Bjonne696/Semster-Project-2/blob/main/images/semester2.png?raw=true)
 
-A simple overview of the use/purpose of the project.
+Auction Zone is a dynamic, web-based auction platform where users can list items for auction and bid on others' listings. Built with modern web technologies, it offers a rich, interactive user experience for auction participants, with a focus on simplicity and functionality.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+Auction Zone caters to users with stud.noroff.no emails, facilitating a community where members can easily sell and purchase items using a credit-based system. Features and functionalities include:
 
-You can add some bullet points if you'd like to:
+- **User Authentication:** Secure login, registration, and logout capabilities.
+- **Profile Customization:** Ability for users to update their avatars.
+- **Credit Management:** Users can view their credit balance, which is affected by auction activities.
+- **Listing and Bidding:** Users can create listings for auction and place bids on active listings.
 
-- List item 1
-- List item 2
-- List item 3
+### Missing Functionalities
+
+While Auction Zone is operational with the core functionalities, several intended features are currently missing or incomplete:
+
+- **Credit System Enhancements:** The process for earning and spending credits through auction activities needs further development.
+- **Comprehensive Search Filters:** Enhanced search functionality for unregistered users is planned but not yet implemented.
+- **Real-time Auction Updates:** Live updates for bids and listing statuses are in the roadmap.
+- **User Dashboard Improvements:** Enhancements to display personalized auction activities and histories are pending.
 
 ## Built With
 
-You can list a the tech stack that you've used over here
+The project leverages the following technologies:
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- [Bootstrap](https://getbootstrap.com/)
+- [SASS](https://sass-lang.com/)
 
 ## Getting Started
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+To set up Auction Zone locally, follow these steps:
 
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone https://github.com/Bjonne696/Semster-Project-2.git
 ```
 
 2. Install the dependencies:
@@ -41,9 +49,13 @@ npm install
 
 ### Running
 
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
+1. Launch Auction Zone by compiling the SASS files and opening index.html in a web browser:
 
-To run the app, run the following commands:
+```bash
+npm run sass
+```
+
+2. To run the app, run the following commands:
 
 ```bash
 npm run start
@@ -51,20 +63,26 @@ npm run start
 
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+Your contributions to improve Auction Zone, especially in implementing missing features, are highly appreciated:
+
+1. Fork the project.
+2. Create your feature branch (git checkout -b feature/YourFeature).
+3. Commit your changes (git commit -am 'Add some YourFeature').
+4. Push to the branch (git push origin feature/YourFeature).
+5. Create a new Pull Request.
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+For any questions or to contribute, please connect through:
 
-[My Twitter page](www.twitter.com)
+[My email](mailto:Bjonne696@gmail.com)
 
-[My LinkedIn page](www.linkedin.com)
 
 ## License
 
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+This project is open source, licensed under the ISC License. See `LICENSE` for more details.
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+- Noroff Academy, for the educational resources and project guidelines.
+- All contributors and future participants looking to enhance the Auction Zone platform.
