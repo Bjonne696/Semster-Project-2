@@ -1,0 +1,214 @@
+body {
+  background-color: #F8F4D7;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: industry-inc-inline, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-family: fino-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: condor, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-primary-gray {
+  background-color: #5D5D5D;
+  padding: 10px 20px;
+}
+.navbar-primary-gray .navbar-brand {
+  color: #F8F4D7;
+  margin-right: 20px;
+}
+.navbar-primary-gray .btn-custom {
+  background-color: #5D5D5D;
+  color: #F8F4D7;
+  border: 1px solid #7FBDC7;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+.navbar-primary-gray .btn-custom:hover, .navbar-primary-gray .btn-custom:focus {
+  background-color: #444444;
+  border-color: #5cabb7;
+  color: #f0e8ac;
+}
+
+.user-banner {
+  background-color: #C55038;
+  display: flex;
+  align-items: center;
+}
+.user-banner img {
+  border: 2px solid #7FBDC7;
+  border-radius: 50%;
+}
+.user-banner .credit-balance {
+  font-weight: bold;
+  color: #F9F46A;
+}
+.user-banner .credits-text {
+  color: #F9F46A;
+}
+
+.yellow-text {
+  color: #F9F46A;
+}
+.yellow-text:hover, .yellow-text:focus {
+  color: #f7f039;
+}
+
+.hero-banner {
+  background-color: #7FBDC7;
+  padding: 50px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-banner .hero-logo {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: auto;
+}
+.hero-banner .hero-text {
+  color: #C55038;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+input[type=text], input[type=password], input[type=search] {
+  background-color: #5D5D5D;
+  color: #F8F4D7;
+  border: 1px solid #7FBDC7;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=search]:focus {
+  outline: none;
+  border-color: #7FBDC7;
+  box-shadow: 0 0 10px rgba(127, 189, 199, 0.5);
+}
+
+button {
+  background-color: #B2F37A;
+  color: #F8F4D7;
+  border: none;
+  border-radius: 15px;
+}
+button:hover {
+  background-color: #97ef4b;
+}
+
+.profile-header {
+  color: #C55038;
+  margin-bottom: 20px;
+}
+
+.custom-card {
+  border-radius: 10px;
+}
+.custom-card .card-body p {
+  margin-bottom: 20px;
+}
+
+.secondary-blue-bg {
+  background-color: #7FBDC7;
+}
+
+.success-green-bg {
+  background-color: #B2F37A;
+}
+
+.btn-success-green {
+  background-color: #B2F37A;
+}
+.btn-success-green:hover {
+  background-color: #97ef4b;
+}
+
+.btn-secondary-blue {
+  background-color: #7FBDC7;
+}
+.btn-secondary-blue:hover {
+  background-color: #5cabb7;
+}
+
+.rounded-btn {
+  border-radius: 10px;
+}
+
+.drag-drop-avatar {
+  height: 100px;
+  border: 2px dashed #5D5D5D;
+  position: relative;
+  margin-bottom: 15px;
+}
+.drag-drop-avatar .avatar-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  width: 50px;
+  height: 50px;
+}
+
+.dashboard-cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard-cards-container .card {
+  flex: 1;
+  margin: 0 10px;
+}
+.dashboard-cards-container .card.border {
+  border: 1px solid #5D5D5D;
+}
+.dashboard-cards-container .card .card-header {
+  background-color: #5D5D5D;
+  color: #F8F4D7;
+}
+.dashboard-cards-container .section-header {
+  background-color: #5D5D5D;
+  padding: 10px 0;
+}
+.dashboard-cards-container .section-header .section-title {
+  color: #F8F4D7;
+  font-weight: bold;
+}
+.dashboard-cards-container .listing-card-section,
+.dashboard-cards-container .bids-card-section {
+  border: 1px solid #5D5D5D;
+  height: 200px;
+}
+.dashboard-cards-container .listing-card-section .listing-card-placeholder,
+.dashboard-cards-container .listing-card-section .bids-card-placeholder,
+.dashboard-cards-container .bids-card-section .listing-card-placeholder,
+.dashboard-cards-container .bids-card-section .bids-card-placeholder {
+  background-color: black;
+  width: 25%;
+  height: 100%;
+  float: left;
+  margin: 0 1%;
+}
+.dashboard-cards-container .card-body2, .dashboard-cards-container .row2 {
+  background-color: #F8F4D7;
+  color: #5D5D5D;
+}
+.dashboard-cards-container .card-header2 {
+  background-color: #5D5D5D;
+  color: #F8F4D7;
+}
+
+/*# sourceMappingURL=custom.css.map */
